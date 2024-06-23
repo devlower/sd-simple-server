@@ -2,6 +2,7 @@ import Pyro4
 from define_classes import Game, Player, Result, Request
 
 @Pyro4.expose
+@Pyro4.behavior(instance_mode="single")
 class GameServer:
     def __init__(self):
         self.games = {}
@@ -34,13 +35,16 @@ class GameServer:
         else:
             raise TypeError('Invalid request type')
         
-        
+
         
 def start_server():
+    Pyro4.config.SERIALIZERS_ACCEPTED.add('pickle')
+    Pyro4.config.SERIALIZER = 'pickle'
+
     daemon = Pyro4.Daemon()
     ns = Pyro4.locateNS()
     uri = daemon.register(GameServer)
-    ns.register('test.gameServer', uri)
+    ns.register('PYRO:Pyro.NameServer@localhost:9090', uri)
     print('Server is running')
     daemon.requestLoop()
 

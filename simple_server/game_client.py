@@ -3,8 +3,11 @@ from define_classes import Request
 
 
 def send_request(action, data):
+    Pyro4.config.SERIALIZERS_ACCEPTED.add('pickle')
+    Pyro4.config.SERIALIZER = 'pickle'
+
     ns = Pyro4.locateNS()
-    uri = ns.lookup('test.gameServer')
+    uri = ns.lookup('PYRO:Pyro.NameServer@localhost:9090')
     game_server = Pyro4.Proxy(uri)
     request = Request(action, data)
     result = game_server.handle_request(request)

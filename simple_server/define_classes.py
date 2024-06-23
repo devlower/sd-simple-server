@@ -1,11 +1,13 @@
 import Pyro4
 
 @Pyro4.expose
+@Pyro4.behavior(instance_mode="single")
 class Game:
     def __init__(self, title):
         self.title = title
 
 @Pyro4.expose
+@Pyro4.behavior(instance_mode="single")
 class Player:
     def __init__(self, username):
         self.username = username
@@ -15,11 +17,13 @@ class Player:
         self.banned = True
 
 @Pyro4.expose
+@Pyro4.behavior(instance_mode="single")
 class Result:
     def __init__(self, message):
         self.message = message
 
 @Pyro4.expose
+@Pyro4.behavior(instance_mode="single")
 class Request:
     def __init__(self, action, data):
         self.action = action
