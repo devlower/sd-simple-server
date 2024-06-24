@@ -94,9 +94,9 @@ public class MyRemoteClass extends UnicastRemoteObject implements MyRemoteInterf
 | Facilidade de Uso | Configuração simples e direta | Mais configuração necessária |
 | Serialização | Biblioteca `serpent` | Nativa do Java |
 | Registro de Objetos | Integrado na biblioteca | `rmiregistry` separado | 
-| Segurança | Opções de autenticação e criptografia | Infraestruutura de segurança Java |
+| Segurança | Opções de autenticação e criptografia | Infraestrutura de segurança Java |
 | Desempenho | Pode variar conforme a implementação | Geralmente bom, dependendo da JVM |
-| Comunicação | Suporte a comuunicação assíncrona |  Principalmente síncrona |
+| Comunicação | Suporte a comunicação assíncrona |  Principalmente síncrona |
 | Deploy | Flexível, suporta múltiplas arquiteturas de rede | Integração robusta com o ecossistema Java |
 
 ## **Conclusão**
