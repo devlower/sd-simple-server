@@ -91,7 +91,7 @@ public class MyRemoteClass extends UnicastRemoteObject implements MyRemoteInterf
 | Aspecto | Pyro4 | Java RMI |
 |---------|-------|----------|
 | Linguagem | Python | Java |
-| Facilidade de Uso | Configuração simples e direta | Mais configuuração necessária |
+| Facilidade de Uso | Configuração simples e direta | Mais configuração necessária |
 | Serialização | Biblioteca `serpent` | Nativa do Java |
 | Registro de Objetos | Integrado na biblioteca | `rmiregistry` separado | 
 | Segurança | Opções de autenticação e criptografia | Infraestruutura de segurança Java |
