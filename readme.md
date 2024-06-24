@@ -7,7 +7,7 @@
 
 
 ## **Introdução**
-Este relatório oferece uma análise das tecnologias Pyro4 (Python Remote Objects) e Java RMI (Remote Mothod Invocation), focando em suas características, funcionalidades, usos e diferenças principais. Ambas as tecnologias permitem a comunicação remota entre objetos distribuídos, mas são projetados para diferentes ecossistemas de linguagem de programação.
+Este relatório oferece uma análise das tecnologias Pyro4 (Python Remote Objects) e Java RMI (Remote Method Invocation), focando em suas características, funcionalidades, usos e diferenças principais. Ambas as tecnologias permitem a comunicação remota entre objetos distribuídos, mas são projetados para diferentes ecossistemas de linguagem de programação.
 
 ## Pyro4
 
